@@ -16,5 +16,34 @@ jQuery 選取網頁的方式有二種主要功能，包含選擇器及過濾器�
 	選出相鄰的其他標籤
 	$(‘h2 + div’)->前一個節點必需是左邊的選擇器
   （4）屬性(attribute)選擇器
-
+	可根據元素是否有特的屬性來選取，也可以指屬性的值
+	$(‘img[alt]’)->屬性選擇器放在元素名稱後面->選取有設定alt屬性的img標籤
+	$(‘a[href]’)->僅選擇有設定href屬性的所有a標籤（並不是所a標籤都具有href屬性）
+	*[attribute=“value”]->選出屬性中有特定值的元素
+		$(‘input[type=“text”]’)->選出有特定屬性值(text)的input表單元素
+	*[attribute^=“value”]->選出屬性有特定值開頭的元素
+		$(‘a[href^=“http://”]’)->找出指向至外部的連結
+	*[attribute$=“value”]->選出屬性以特定值結尾的元素
+		$(‘a[href$=“.pdf”]’)->找出pdf結尾的連結
+	*[attribute*=“value”]->選出屬性值中間有特定值的元素
 4。過濾器
+  （1）:even , :odd ->選出群組中相隔二個的元素（根據DOM元素中的索引值）
+	$(‘tr:even’)->選擇表格中的雙數行
+	$(‘.striped tr:even’)->找出雙數行中class名稱為striped
+  （2）:first,:last->選出第一或最後一個元素
+	$(‘p:first’)
+  （3）:not()->可選出不符選擇器的元素
+	$(‘a:not(.navButton)’)->選出a標籤，但要排除以navButton為名的class
+	$(‘a:not([href^=“http://”])’)->找出所有不以http://開頭的連結
+  （4）:has()->選出內有其他選擇器的元素
+	$(‘li:has(a)’)->選出所有li標籤，並且其中有a標籤
+  （5）:contains()->選出帶有特定文字的元素
+	$(‘a:contains(“Click Me!”)’)
+  （6）:visible,:hidden->找出可見／隱藏中的元素
+	$(‘div:hidden’).show();->找出隱藏中的div標籤，並顯示
+5。jQuery的選取結果
+  （1）自動迴圈
+  （2）鏈結函式
+6。設定與讀取標籤屬性
+7。增加內容至網頁中
+8。操控選出的每個元素
