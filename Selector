@@ -1,0 +1,12 @@
+jQuery 選取網頁的方式有二種主要功能，包含選擇器及過濾器，而Selector(選擇器)分為三種：
+1。元素選擇器
+  var linksList = document.getElementsByTagName('a');
+  in jQuery way => var linksList = $('a');
+  ->取得網頁上每個<a> Tag
+2。class選擇器
+3。進階選擇器
+  （1）後裔(descendant)選擇器
+  （2）子(child)選擇器
+  （3）相鄰(adjacent sibling)選擇器
+  （4）屬性(attribute)選擇器
+4。過濾器
